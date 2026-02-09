@@ -44,19 +44,38 @@ function doYouWin (sum, oddOrEven) {
     const doYouWin = (sum % 2 === 0 && oddOrEven.toLowerCase() === 'pari') ? 'Hai vinto' : 'Hai perso';
     return doYouWin;
 }
+//funzione per controllare che sia giusto l'intervallo inserito
+function getCorrectRange (num) {
+    const correctRange = (num > 0 && num <= 5) ? true : false;
+    return correctRange;
+}
+//funzione per controllare oddOrEven che siamo corretti
+function getCorrectOddOrEven (oddOrEven) {
+    const correctOddOrEven = (oddOrEven.toLowerCase() == 'pari' || oddOrEven.toLowerCase() == 'dispari') ? true : false;
+    return correctOddOrEven;
+}
 
 // inputs utente
 const oddOrEven = prompt('Scegli Pari o dispari: ');
 const num = parseInt(prompt('Inserisci un numero da 1 a 5: '));
-// calcoli
-const computerNum = getNumRandom();
-sum = getSum(num, computerNum);
-const winner = doYouWin(sum, oddOrEven);
+// inputs checks
+const correctOddOrEven = getCorrectOddOrEven(oddOrEven);
+const correctRange = getCorrectRange(num);
 
-console.log(
-    `${winner}, la somma è: ${sum}
-    Hai scommesso su: ${oddOrEven}
-    Hai scelto il numero: ${num}
-    Il computer ha il numero: ${computerNum}
-    `
-);
+//input corretti
+if (correctRange === true && correctOddOrEven === true) {
+    // calcoli
+    const computerNum = getNumRandom();
+    sum = getSum(num, computerNum);
+    const winner = doYouWin(sum, oddOrEven);
+    //visualizzazione risultato
+    console.log(
+        `${winner}, la somma è: ${sum}
+        Hai scommesso su: ${oddOrEven}
+        Hai scelto il numero: ${num}
+        Il computer ha il numero: ${computerNum}
+        `
+    );
+} else { //input sbagliati
+    alert('Per Favore inserisci dei Valori Validi');
+} 
