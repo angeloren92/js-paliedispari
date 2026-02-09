@@ -23,9 +23,29 @@ tools
 -funzioni
 -math con metodi floor e random
 -operatori matematici
--if/else (proviamo switch?)
+-if/else
 -operatori logici
 -console.log
 -prompt
 */
 
+const oddOrEven = 'pari';
+const num = 3;
+
+function getNumRandom () {
+    numRandom = (Math.floor(Math.random()*5) +1);
+    return numRandom;
+}
+
+const computerNum = getNumRandom();
+
+function sum (num1, num2) {
+    sum = num1 + num2;
+    return sum;
+}
+
+sum = sum(num, getNumRandom())
+
+
+
+console.log(sum)
