@@ -41,15 +41,22 @@ function getSum (num1, num2) {
 }
 //funzione per scoprire se abbiamo vinto
 function doYouWin (sum, oddOrEven) {
-    const doYouWin = (sum % 2 === 0 && oddOrEven === "pari") ? 'hai vinto' : 'hai perso';
+    const doYouWin = (sum % 2 === 0 && oddOrEven.toLowerCase() === 'pari') ? 'Hai vinto' : 'Hai perso';
     return doYouWin;
 }
 
 // inputs utente
-const oddOrEven = 'pari';
-const num = 3;
+const oddOrEven = prompt('Scegli Pari o dispari: ');
+const num = parseInt(prompt('Inserisci un numero da 1 a 5: '));
 // calcoli
 const computerNum = getNumRandom();
 sum = getSum(num, computerNum);
 const winner = doYouWin(sum, oddOrEven);
-console.log(sum, winner);
+
+console.log(
+    `${winner}, la somma è: ${sum}
+    Hai scommesso su: ${oddOrEven}
+    Hai scelto il numero: ${num}
+    Il computer ha il numero: ${computerNum}
+    `
+);
