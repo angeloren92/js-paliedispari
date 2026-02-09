@@ -29,23 +29,27 @@ tools
 -prompt
 */
 
-const oddOrEven = 'pari';
-const num = 3;
-
+//funzione per restituire un numero casuale da 1 a 5
 function getNumRandom () {
     numRandom = (Math.floor(Math.random()*5) +1);
     return numRandom;
 }
-
-const computerNum = getNumRandom();
-
-function sum (num1, num2) {
+//funzione per restituire la somma di due numeri
+function getSum (num1, num2) {
     sum = num1 + num2;
     return sum;
 }
+//funzione per scoprire se abbiamo vinto
+function doYouWin (sum, oddOrEven) {
+    const doYouWin = (sum % 2 === 0 && oddOrEven === "pari") ? 'hai vinto' : 'hai perso';
+    return doYouWin;
+}
 
-sum = sum(num, getNumRandom())
-
-
-
-console.log(sum)
+// inputs utente
+const oddOrEven = 'pari';
+const num = 3;
+// calcoli
+const computerNum = getNumRandom();
+sum = getSum(num, computerNum);
+const winner = doYouWin(sum, oddOrEven);
+console.log(sum, winner);
