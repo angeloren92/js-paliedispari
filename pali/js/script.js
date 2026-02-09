@@ -25,3 +25,24 @@ tools
 -funzione x2
 -if else
 */
+
+//funzione per invertire la parola
+function getReversedWord (word) { // funzione che ha bisogno di un parametro
+    let reversedWord = '';  // la dichiarabile è necessaria solo in questo ambito
+    for (let i = word.length -1; i >= 0; i--) { //iteriamo n volte la lunghezza della parola
+        let char = word[i]; //prendiamo le lettere della parola al contrario
+        reversedWord += char; //contateniamo le lettere restituite
+    }
+    return reversedWord; //restituiamo il valore
+}
+
+//funzione per verificare se la parola sia palindroma
+function getPaliWord (word, reversedWord) { //diamo come parametri le due parole da confrontare
+    let isPaliWord = (word == reversedWord ? true : false); //confronto
+    console.log(isPaliWord); //log risultato
+}
+
+let inputWord = 'Tomomot';
+let reversedWord = getReversedWord(inputWord)
+console.log(getReversedWord(inputWord));
+getPaliWord(inputWord, reversedWord);
