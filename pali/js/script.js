@@ -37,12 +37,12 @@ function getReversedWord (word) { // funzione che ha bisogno di un parametro
 }
 
 //funzione per verificare se la parola sia palindroma
-function getPaliWord (word, reversedWord) { //diamo come parametri le due parole da confrontare
-    let isPaliWord = (word == reversedWord ? true : false); //confronto
-    console.log(isPaliWord); //log risultato
+function logIsPaliWord (word, reversedWord) { //diamo come parametri le due parole da confrontare
+    let isPaliWord = word.toLowerCase() == reversedWord.toLowerCase(); /*confronto tutto in lowercase con operatore ternario, dato che è una condizione molto semplice*/ 
+    console.log(`E' la parola Palindroma? ${isPaliWord}`); //log risultato
 }
-
-let inputWord = 'Tomomot';
-let reversedWord = getReversedWord(inputWord)
-console.log(getReversedWord(inputWord));
-getPaliWord(inputWord, reversedWord);
+//ho voluto creare due funzioni, una con return e una senza retun per studiarle. 
+let inputWord = prompt('Inserisci la Parola per verificare se sia Palindroma: ');  //input
+/* ho concatenato le due funzioni, in modo da evitare di salvare la parola reversata in una ulteriore variabile,
+dato che getReversedWord restituisce già il valore reversato */
+logIsPaliWord(inputWord, getReversedWord(inputWord));
