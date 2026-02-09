@@ -41,6 +41,7 @@ function logIsPaliWord (word, reversedWord) { //diamo come parametri le due paro
     let isPaliWord = word.toLowerCase() == reversedWord.toLowerCase(); /*confronto tutto in lowercase con operatore ternario, dato che è una condizione molto semplice*/ 
     console.log(`E' la parola Palindroma? ${isPaliWord}`); //log risultato
 }
+
 //ho voluto creare due funzioni, una con return e una senza retun per studiarle. 
 let inputWord = prompt('Inserisci la Parola per verificare se sia Palindroma: ');  //input
 /* ho concatenato le due funzioni, in modo da evitare di salvare la parola reversata in una ulteriore variabile,
