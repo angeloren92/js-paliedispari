@@ -27,32 +27,34 @@ tools
 -operatori logici
 -console.log
 -prompt
+
+PS ottimizazione alle functions, per evitare la dichiarazione globale di variabili all'interno delle funzioni, rendendole function scope, ho rimosso la parola chiave dichiarazione delle variabili
 */
 
 //funzione per restituire un numero casuale da 1 a 5
 function getNumRandom () {
-    numRandom = (Math.floor(Math.random()*5) +1);
-    return numRandom;
+    getNumRandom = (Math.floor(Math.random()*5) +1);
+    return getNumRandom;
 }
 //funzione per restituire la somma di due numeri
 function getSum (num1, num2) {
-    sum = num1 + num2;
-    return sum;
+    getSum = num1 + num2;
+    return getSum;
 }
 //funzione per scoprire se abbiamo vinto
 function doYouWin (sum, oddOrEven) {
-    const doYouWin = (sum % 2 === 0 && oddOrEven.toLowerCase() === 'pari') ? 'Hai vinto' : 'Hai perso';
+    doYouWin = (sum % 2 === 0 && oddOrEven.toLowerCase() === 'pari') ? 'Hai vinto' : 'Hai perso';
     return doYouWin;
 }
 //funzione per controllare che sia giusto l'intervallo inserito
 function getCorrectRange (num) {
-    const correctRange = (num > 0 && num <= 5) ? true : false;
-    return correctRange;
+    getCorrectRange = (num > 0 && num <= 5) ;
+    return getCorrectRange;
 }
 //funzione per controllare oddOrEven che siamo corretti
 function getCorrectOddOrEven (oddOrEven) {
-    const correctOddOrEven = (oddOrEven.toLowerCase() == 'pari' || oddOrEven.toLowerCase() == 'dispari') ? true : false;
-    return correctOddOrEven;
+    getCorrectOddOrEven = (oddOrEven.toLowerCase() == 'pari' || oddOrEven.toLowerCase() == 'dispari') ;
+    return getCorrectOddOrEven;
 }
 
 // inputs utente

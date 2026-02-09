@@ -35,3 +35,5 @@ come si capisce se una parola è palindroma ? Che lavoro occorre fare sulla paro
 Per i ticket, come sempre io e @Camilla Tofani ci siamo dalle 15 alle 18.
 
 Buon lavoro
+*******************************************************************************************************************
+Le Memorie di Angelo [09.02.2026]
