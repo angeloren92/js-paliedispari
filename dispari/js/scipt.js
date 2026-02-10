@@ -66,7 +66,7 @@ const correctRange = getCorrectRange(num);
 if (correctRange === true && correctOddOrEven === true) {
     // calcoli
     const computerNum = getNumRandom();
-    sum = getSum(num, computerNum);
+    const sum = getSum(num, computerNum);
     const winner = getDoYouWin(sum, oddOrEven);
     //visualizzazione risultato
     console.log(
