@@ -27,8 +27,6 @@ tools
 -operatori logici
 -console.log
 -prompt
-
-PS ottimizazione alle functions, per evitare la dichiarazione globale di variabili all'interno delle funzioni, rendendole function scope, ho rimosso la parola chiave dichiarazione delle variabili
 */
 
 //funzione per restituire un numero casuale da 1 a 5
