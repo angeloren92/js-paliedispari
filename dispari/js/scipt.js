@@ -33,28 +33,28 @@ PS ottimizazione alle functions, per evitare la dichiarazione globale di variabi
 
 //funzione per restituire un numero casuale da 1 a 5
 function getNumRandom () {
-    getNumRandom = (Math.floor(Math.random()*5) +1);
-    return getNumRandom;
+    const numRandom = (Math.floor(Math.random()*5) +1);
+    return numRandom;
 }
 //funzione per restituire la somma di due numeri
 function getSum (num1, num2) {
-    getSum = num1 + num2;
-    return getSum;
+    const sum = num1 + num2;
+    return sum;
 }
 //funzione per scoprire se abbiamo vinto
-function doYouWin (sum, oddOrEven) {
-    doYouWin = (sum % 2 === 0 && oddOrEven.toLowerCase() === 'pari') ? 'Hai vinto' : 'Hai perso';
+function getDoYouWin (sum, oddOrEven) {
+    const doYouWin = (sum % 2 === 0 && oddOrEven.toLowerCase() === 'pari') ? 'Hai vinto' : 'Hai perso';
     return doYouWin;
 }
 //funzione per controllare che sia giusto l'intervallo inserito
 function getCorrectRange (num) {
-    getCorrectRange = (num > 0 && num <= 5) ;
-    return getCorrectRange;
+    const correctRange = (num > 0 && num <= 5) ;
+    return correctRange;
 }
 //funzione per controllare oddOrEven che siamo corretti
 function getCorrectOddOrEven (oddOrEven) {
-    getCorrectOddOrEven = (oddOrEven.toLowerCase() == 'pari' || oddOrEven.toLowerCase() == 'dispari') ;
-    return getCorrectOddOrEven;
+    const correctOddOrEven = (oddOrEven.toLowerCase() == 'pari' || oddOrEven.toLowerCase() == 'dispari') ;
+    return correctOddOrEven;
 }
 
 // inputs utente
@@ -69,7 +69,7 @@ if (correctRange === true && correctOddOrEven === true) {
     // calcoli
     const computerNum = getNumRandom();
     sum = getSum(num, computerNum);
-    const winner = doYouWin(sum, oddOrEven);
+    const winner = getDoYouWin(sum, oddOrEven);
     //visualizzazione risultato
     console.log(
         `${winner}, la somma è: ${sum}
